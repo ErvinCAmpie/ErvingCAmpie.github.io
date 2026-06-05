@@ -27,11 +27,7 @@
 
 <link rel="stylesheet" href="css/style.css">
 
-<script>
-function exportarPDF() {
-    window.print();
-}
-</script>
+
 
 </head>
 <body>
@@ -50,6 +46,7 @@ function exportarPDF() {
     <li><a href="#hotelero">Sistema Hotelero</a></li>
     <li><a href="#gestores">CRUD Gestores</a></li>
     <li><a href="#geotracker">GeoTracker</a></li>
+    <li><a href="#SaciSoft">SaciSoft</a></li>
     <li><a href="#contacto">Contacto</a></li>
 </ul>
 
@@ -67,9 +64,6 @@ function exportarPDF() {
     ASP.NET Core • ASP.NET MVC • React • SQL Server
 </p>
 
-<button onclick="exportarPDF()">
-    📄 Exportar Portafolio PDF
-</button>
 
 
 </header>
@@ -220,17 +214,74 @@ function exportarPDF() {
 
 </section>
 
+<section id="SaciSoft">
+
+
+<h2>📍 SaciSoft</h2>
+
+<p>
+    Aplicación React que utiliza la API de Geolocalización del navegador
+    para obtener la ubicación actual del usuario y mostrarla en un mapa
+    interactivo utilizando OpenStreetMap.
+</p>
+
+<h3>Funcionalidades</h3>
+
+<ul>
+    <li>Desarrollo y mantenimiento de aplicaciones empresariales
+utilizando C# y ASP.NET MVC. - Implementación y optimización de consultas y
+procedimientos en SQL Server. - Corrección de incidencias y mejoras evolutivas en
+sistemas existentes. - Análisis de requerimientos y soporte técnico a usuarios
+internos. - Aplicación de buenas prácticas de desarrollo y control de versiones.</li>
+   
+</ul>
+
+<h3>Tecnologías</h3>
+
+<p>
+    Asp. NET · JavaScript · SQL SERVER· C# · CSS3
+</p>
+
+<div class="gallery">
+
+    <img src="images/saci-dash.jpeg" alt="SaciSoft">
+  <img src="images/saci-login.png" alt="SaciSoft">
+    <img src="images/saci-report.png" alt="SaciSoft">
+</div>
+
+
+</section>
 <section id="contacto">
 
 
 <h2>Contacto</h2>
 
 <p>
-    GitHub:
-    <a href="https://github.com/ErvinCAmpie" target="_blank">
+    📧 Correo:
+    <a class="contact-link"
+       href="mailto:ervingcampie16@gmail.com">
+        ervingcampie16@gmail.com
+    </a>
+</p>
+
+<p>
+    📱 Teléfono:
+    <a class="contact-link"
+       href="tel:+50576909657">
+        +505 7690 9657
+    </a>
+</p>
+
+<p>
+    💻 GitHub:
+    <a class="contact-link"
+       href="https://github.com/ErvinCAmpie"
+       target="_blank">
         github.com/ErvinCAmpie
     </a>
 </p>
+
+
 
 </section>
 
@@ -253,6 +304,7 @@ function exportarPDF() {
     <div id="caption"></div>
 
 </div>
+
 <script>
 
 const modal = document.getElementById("imageModal");
@@ -291,9 +343,15 @@ modal.onclick = function(event){
 
 };
 
+
+
+function exportarPDF() {
+    window.print();
+}
+
 </script>
+
+
 </body>
 </html>
 
-
-</html

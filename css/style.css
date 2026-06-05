@@ -263,47 +263,57 @@ border-radius:10px;
 
 /* IMPRESIÓN PDF */
 
-@media print{
+@media print {
 
-```
-.navbar{
-    display:none;
+    .navbar,
+    .hero button,
+    .modal{
+        display:none !important;
+    }
+
+    body{
+        background:#0f172a !important;
+        color:#e2e8f0 !important;
+
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .hero{
+        background:linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b
+        ) !important;
+    }
+
+    #hotelero,
+    #gestores,
+    #geotracker{
+        background:#1e293b !important;
+        color:#e2e8f0 !important;
+        border:1px solid #475569 !important;
+        page-break-inside:avoid;
+    }
+
+    h2,h3{
+        color:#38bdf8 !important;
+    }
+
+    .skills span{
+        background:#1e293b !important;
+        color:#e2e8f0 !important;
+        border:1px solid #475569 !important;
+    }
+
+    a{
+        color:#38bdf8 !important;
+    }
+
+    footer{
+        border-top:1px solid #475569 !important;
+    }
 }
-
-.hero button{
-    display:none;
-}
-
-body{
-    background:white;
-    color:black;
-}
-
-section{
-    max-width:100%;
-    padding:20px;
-}
-
-#hotelero,
-#gestores,
-#geotracker{
-    background:white;
-    border:1px solid #ddd;
-    page-break-inside:avoid;
-}
-
-.gallery img{
-    max-height:200px;
-}
-
-footer{
-    border:none;
-}
-```
-
-}
-
-
 .modal{
     display:none;
     position:fixed;
@@ -342,4 +352,16 @@ footer{
 
 .gallery img{
     cursor:pointer;
+}
+
+#contacto a,
+.contact-link{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contacto a:hover,
+.contact-link:hover{
+    color: #38bdf8;
 }
