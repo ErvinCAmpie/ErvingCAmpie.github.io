@@ -34,22 +34,23 @@
 
 <nav class="navbar">
 
+    <div class="logo">
+        <img style="width:85px;" src="images/logo.png" alt="">
+    </div>
 
-<div class="logo">
-    <img  style="width: 85px; height: auto;" src="images/logo.png" alt="">
-   
-</div>
+    <button class="menu-toggle" id="menuToggle">
+        ☰
+    </button>
 
-<ul class="menu">
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#sobre-mi">Sobre Mí</a></li>
-    <li><a href="#hotelero">Sistema Hotelero</a></li>
-    <li><a href="#gestores">CRUD Gestores</a></li>
-    <li><a href="#geotracker">GeoTracker</a></li>
-    <li><a href="#SaciSoft">SaciSoft</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-</ul>
-
+    <ul class="menu" id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#hotelero">Sistema Hotelero</a></li>
+        <li><a href="#gestores">CRUD Gestores</a></li>
+        <li><a href="#geotracker">GeoTracker</a></li>
+        <li><a href="#SaciSoft">SaciSoft</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
 
 </nav>
 
@@ -347,10 +348,20 @@ modal.onclick = function(event){
 
 
 
-function exportarPDF() {
-    window.print();
-}
 
+
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
+
+document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+    });
+});
 </script>
 
 
